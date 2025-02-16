@@ -15,7 +15,7 @@ import NextLink from "next/link";
 import { Image, Button, Tooltip } from "@heroui/react";
 import clsx from "clsx";
 
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 
 import { siteConfig } from "@/config/site";
@@ -59,24 +59,25 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden md:flex">
-          {!isConnected && <Tooltip color="danger" content="You must connect wallet first">
-            <div>
-              <Button
-                as={Link}
-                className="text-sm font-normal"
-                href="#"
-                isDisabled={!isConnected}
-                className="me-2"
-                variant="shadow"
-                color="primary"
-              >
-                Connect Smartwatch
-              </Button>
-            </div>
-          </Tooltip>
-          }
-          {
-            isConnected && <Button
+          {!isConnected && (
+            <Tooltip color="danger" content="You must connect wallet first">
+              <div>
+                <Button
+                  as={Link}
+                  className="text-sm font-normal"
+                  href="#"
+                  isDisabled={!isConnected}
+                  className="me-2"
+                  variant="shadow"
+                  color="primary"
+                >
+                  Connect Smartwatch
+                </Button>
+              </div>
+            </Tooltip>
+          )}
+          {isConnected && (
+            <Button
               as={Link}
               className="text-sm font-normal"
               href="#"
@@ -87,7 +88,7 @@ export const Navbar = () => {
             >
               Connect Smartwatch
             </Button>
-          }
+          )}
           <ConnectButton accountStatus="avatar" />
         </NavbarItem>
       </NavbarContent>
@@ -100,9 +101,7 @@ export const Navbar = () => {
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link href={item.href}>
-                {item.label}
-              </Link>
+              <Link href={item.href}>{item.label}</Link>
             </NavbarMenuItem>
           ))}
         </div>

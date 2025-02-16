@@ -6,7 +6,7 @@ import Chart from "react-apexcharts";
 const SleepChart = () => {
   const options = {
     labels: ["Light Sleep", "Deep Sleep", "REM Sleep"],
-    colors: ["#2667FF","#3B28CC","#87BFFF"],
+    colors: ["#2667FF", "#3B28CC", "#87BFFF"],
   };
 
   const series = [270, 150, 60];

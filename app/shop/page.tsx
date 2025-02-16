@@ -1,7 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { Card, CardBody, CardFooter, Image, Breadcrumbs, BreadcrumbItem, Button, Select, SelectItem, Chip } from "@heroui/react";
+import {
+  Card,
+  CardBody,
+  CardFooter,
+  Image,
+  Breadcrumbs,
+  BreadcrumbItem,
+  Button,
+  Select,
+  SelectItem,
+  Chip,
+} from "@heroui/react";
 import {
   Modal,
   ModalContent,
@@ -76,7 +87,7 @@ export default function Home() {
   ];
 
   const sortedList = [...list].sort((a, b) =>
-    sortOrder === "asc" ? a.price - b.price : b.price - a.price
+    sortOrder === "asc" ? a.price - b.price : b.price - a.price,
   );
 
   const handleSuccess = () => {
@@ -101,13 +112,28 @@ export default function Home() {
         </div>
         <div className="px-6 md:px-0 max-w-6xl h-full py-8 md:py-20 mx-auto relative">
           <div className="max-w-3xl mb-10">
-            <p className="text-2xl font-medium"><span className="text-primary font-bold">TURU</span> NFT Marketplace</p>
-            <p className="text-1xl mb-4 text-primary">Get Exclusive NFTs & Start Earning Rewards from Your Sleep!</p>
-            <p className="text-slate-500 text-sm">Welcome to the official Turu marketplace! Here, you can purchase NFTs that will grant access to exclusive features and sleep-quality-based rewards. Choose an NFT that fits your sleep style and start your journey towards healthier and more productive sleep!</p>
+            <p className="text-2xl font-medium">
+              <span className="text-primary font-bold">TURU</span> NFT
+              Marketplace
+            </p>
+            <p className="text-1xl mb-4 text-primary">
+              Get Exclusive NFTs & Start Earning Rewards from Your Sleep!
+            </p>
+            <p className="text-slate-500 text-sm">
+              Welcome to the official Turu marketplace! Here, you can purchase
+              NFTs that will grant access to exclusive features and
+              sleep-quality-based rewards. Choose an NFT that fits your sleep
+              style and start your journey towards healthier and more productive
+              sleep!
+            </p>
           </div>
           <div className="mb-4 flex">
             <div className="w-full md:max-w-sm">
-              <Select defaultSelectedKeys={["asc"]} onChange={(e) => setSortOrder(e.target.value)} placeholder="Sort by">
+              <Select
+                defaultSelectedKeys={["asc"]}
+                onChange={(e) => setSortOrder(e.target.value)}
+                placeholder="Sort by"
+              >
                 <SelectItem key="asc">Sort by Price: Low to High</SelectItem>
                 <SelectItem key="desc">Sort by Price: High to Low</SelectItem>
               </Select>
@@ -125,18 +151,41 @@ export default function Home() {
                     src={item.img}
                     width="100%"
                   />
-                  {
-                    item.type == "Common" && <Chip size="sm" className="mb-2 absolute top-2 left-2 z-10 px-4">Common</Chip>
-                  }
-                  {
-                    item.type == "Rare" && <Chip size="sm" color="primary" className="mb-2 absolute top-2 left-2 z-10 px-4">Rare</Chip>
-                  }
-                  {
-                    item.type == "Epic" && <Chip size="sm" color="secondary" className="mb-2 absolute top-2 left-2 z-10 px-4">Epic</Chip>
-                  }
-                  {
-                    item.type == "Legend" && <Chip size="sm" color="danger" className="mb-2 absolute top-2 left-2 z-10 px-4">Legend</Chip>
-                  }
+                  {item.type == "Common" && (
+                    <Chip
+                      size="sm"
+                      className="mb-2 absolute top-2 left-2 z-10 px-4"
+                    >
+                      Common
+                    </Chip>
+                  )}
+                  {item.type == "Rare" && (
+                    <Chip
+                      size="sm"
+                      color="primary"
+                      className="mb-2 absolute top-2 left-2 z-10 px-4"
+                    >
+                      Rare
+                    </Chip>
+                  )}
+                  {item.type == "Epic" && (
+                    <Chip
+                      size="sm"
+                      color="secondary"
+                      className="mb-2 absolute top-2 left-2 z-10 px-4"
+                    >
+                      Epic
+                    </Chip>
+                  )}
+                  {item.type == "Legend" && (
+                    <Chip
+                      size="sm"
+                      color="danger"
+                      className="mb-2 absolute top-2 left-2 z-10 px-4"
+                    >
+                      Legend
+                    </Chip>
+                  )}
                 </CardBody>
                 <CardFooter className="text-small flex-col items-start">
                   <div className="flex justify-between w-full">
@@ -144,20 +193,26 @@ export default function Home() {
                     <p className="text-default-500">{item.price}ETH</p>
                   </div>
                   <div className="flex justify-between mb-2 w-full">
-                    {
-                      item.type == "Common" && <p className="text-xs text-default-500">{item.benefit}</p>
-                    }
-                    {
-                      item.type == "Rare" && <p className="text-xs text-primary">{item.benefit}</p>
-                    }
-                    {
-                      item.type == "Epic" && <p className="text-xs text-secondary">{item.benefit}</p>
-                    }
-                    {
-                      item.type == "Legend" && <p className="text-xs text-danger">{item.benefit}</p>
-                    }
+                    {item.type == "Common" && (
+                      <p className="text-xs text-default-500">{item.benefit}</p>
+                    )}
+                    {item.type == "Rare" && (
+                      <p className="text-xs text-primary">{item.benefit}</p>
+                    )}
+                    {item.type == "Epic" && (
+                      <p className="text-xs text-secondary">{item.benefit}</p>
+                    )}
+                    {item.type == "Legend" && (
+                      <p className="text-xs text-danger">{item.benefit}</p>
+                    )}
                   </div>
-                  <Button color="primary" variant="shadow" size="sm" fullWidth onPress={modal1.onOpen}>
+                  <Button
+                    color="primary"
+                    variant="shadow"
+                    size="sm"
+                    fullWidth
+                    onPress={modal1.onOpen}
+                  >
                     Buy NFT
                   </Button>
                 </CardFooter>
@@ -165,15 +220,25 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section >
+      </section>
 
-      <Modal backdrop="blur" isOpen={modal1.isOpen} onOpenChange={modal1.onOpenChange}>
+      <Modal
+        backdrop="blur"
+        isOpen={modal1.isOpen}
+        onOpenChange={modal1.onOpenChange}
+      >
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Confirm Your Purchase</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">
+                Confirm Your Purchase
+              </ModalHeader>
               <ModalBody>
-                <p>Are you sure you want to purchase this NFT? Once confirmed, the transaction will be processed, and the NFT will be added to your wallet.</p>
+                <p>
+                  Are you sure you want to purchase this NFT? Once confirmed,
+                  the transaction will be processed, and the NFT will be added
+                  to your wallet.
+                </p>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
@@ -188,13 +253,23 @@ export default function Home() {
         </ModalContent>
       </Modal>
 
-      <Modal backdrop="blur" isOpen={modal2.isOpen} onOpenChange={modal2.onOpenChange}>
+      <Modal
+        backdrop="blur"
+        isOpen={modal2.isOpen}
+        onOpenChange={modal2.onOpenChange}
+      >
         <ModalContent>
           {(onClose2) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">NFT Purchase Successful!</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">
+                NFT Purchase Successful!
+              </ModalHeader>
               <ModalBody>
-                <p>Congratulations! You have successfully purchased [NFT Name]. Your NFT has been added to your wallet, and you can now start earning rewards while you sleep.</p>
+                <p>
+                  Congratulations! You have successfully purchased [NFT Name].
+                  Your NFT has been added to your wallet, and you can now start
+                  earning rewards while you sleep.
+                </p>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose2}>
@@ -208,6 +283,6 @@ export default function Home() {
           )}
         </ModalContent>
       </Modal>
-    </div >
+    </div>
   );
 }
