@@ -1,6 +1,6 @@
 "use client";
 
-import { Image } from "@heroui/react";
+import { Image } from "@heroui/image";
 import { Link } from "@heroui/link";
 
 export const Footer = () => {
@@ -24,121 +24,29 @@ export const Footer = () => {
           </div>
           <div className="col-span-12 md:col-span-4">
             <p className="text-2xl text-white mb-6">About</p>
-            <p className="text-sm text-white opacity-75 mb-4">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
-              quo aliquid incidunt sed sint consequatur nesciunt nisi laborum
-              perspiciatis provident.
-            </p>
-            <p className="text-sm text-white opacity-75">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
-              quo aliquid incidunt sed sint consequatur nesciunt nisi laborum
-              perspiciatis provident.
-            </p>
+            <p className="text-sm text-white opacity-75 mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem quo aliquid incidunt sed sint consequatur nesciunt nisi laborum perspiciatis provident.</p>
+            <p className="text-sm text-white opacity-75">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem quo aliquid incidunt sed sint consequatur nesciunt nisi laborum perspiciatis provident.</p>
           </div>
           <div className="col-span-6 md:col-span-2 md:col-start-9">
             <p className="text-2xl text-white mb-6">Navigation</p>
             <ul>
-              <li className="pb-1">
-                <Link
-                  href="#"
-                  className="text-sm text-white opacity-75 hover:opacity-100"
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="pb-1">
-                <Link
-                  href="#"
-                  className="text-sm text-white opacity-75 hover:opacity-100"
-                >
-                  Shop
-                </Link>
-              </li>
-              <li className="pb-1">
-                <Link
-                  href="#"
-                  className="text-sm text-white opacity-75 hover:opacity-100"
-                >
-                  Statistics
-                </Link>
-              </li>
-              <li className="pb-1">
-                <Link
-                  href="#"
-                  className="text-sm text-white opacity-75 hover:opacity-100"
-                >
-                  How to Earn
-                </Link>
-              </li>
-              <li className="pb-1">
-                <Link
-                  href="#"
-                  className="text-sm text-white opacity-75 hover:opacity-100"
-                >
-                  Whitepaper
-                </Link>
-              </li>
-              <li className="pb-1">
-                <Link
-                  href="#"
-                  className="text-sm text-white opacity-75 hover:opacity-100"
-                >
-                  FAQ
-                </Link>
-              </li>
+              <li className="pb-1"><Link href="#" className="text-sm text-white opacity-75 hover:opacity-100">Home</Link></li>
+              <li className="pb-1"><Link href="#" className="text-sm text-white opacity-75 hover:opacity-100">Shop</Link></li>
+              <li className="pb-1"><Link href="#" className="text-sm text-white opacity-75 hover:opacity-100">Statistics</Link></li>
+              <li className="pb-1"><Link href="#" className="text-sm text-white opacity-75 hover:opacity-100">How to Earn</Link></li>
+              <li className="pb-1"><Link href="#" className="text-sm text-white opacity-75 hover:opacity-100">Whitepaper</Link></li>
+              <li className="pb-1"><Link href="#" className="text-sm text-white opacity-75 hover:opacity-100">FAQ</Link></li>
             </ul>
           </div>
           <div className="col-span-6 md:col-span-2">
             <p className="text-2xl text-white mb-6">Lorem, ipsum.</p>
             <ul>
-              <li className="pb-1">
-                <Link
-                  href="#"
-                  className="text-sm text-white opacity-75 hover:opacity-100"
-                >
-                  Lorem, ipsum.
-                </Link>
-              </li>
-              <li className="pb-1">
-                <Link
-                  href="#"
-                  className="text-sm text-white opacity-75 hover:opacity-100"
-                >
-                  Lorem, ipsum.
-                </Link>
-              </li>
-              <li className="pb-1">
-                <Link
-                  href="#"
-                  className="text-sm text-white opacity-75 hover:opacity-100"
-                >
-                  Lorem, ipsum.
-                </Link>
-              </li>
-              <li className="pb-1">
-                <Link
-                  href="#"
-                  className="text-sm text-white opacity-75 hover:opacity-100"
-                >
-                  Lorem, ipsum.
-                </Link>
-              </li>
-              <li className="pb-1">
-                <Link
-                  href="#"
-                  className="text-sm text-white opacity-75 hover:opacity-100"
-                >
-                  Lorem, ipsum.
-                </Link>
-              </li>
-              <li className="pb-1">
-                <Link
-                  href="#"
-                  className="text-sm text-white opacity-75 hover:opacity-100"
-                >
-                  Lorem, ipsum.
-                </Link>
-              </li>
+              <li className="pb-1"><Link href="#" className="text-sm text-white opacity-75 hover:opacity-100">Lorem, ipsum.</Link></li>
+              <li className="pb-1"><Link href="#" className="text-sm text-white opacity-75 hover:opacity-100">Lorem, ipsum.</Link></li>
+              <li className="pb-1"><Link href="#" className="text-sm text-white opacity-75 hover:opacity-100">Lorem, ipsum.</Link></li>
+              <li className="pb-1"><Link href="#" className="text-sm text-white opacity-75 hover:opacity-100">Lorem, ipsum.</Link></li>
+              <li className="pb-1"><Link href="#" className="text-sm text-white opacity-75 hover:opacity-100">Lorem, ipsum.</Link></li>
+              <li className="pb-1"><Link href="#" className="text-sm text-white opacity-75 hover:opacity-100">Lorem, ipsum.</Link></li>
             </ul>
           </div>
         </div>
